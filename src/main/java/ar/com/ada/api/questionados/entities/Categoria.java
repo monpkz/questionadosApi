@@ -1,15 +1,15 @@
 package ar.com.ada.api.questionados.entities;
 
 import java.util.*;
-
+import javax.persistence.*;
 
 @Entity
-@Table(name= "categoria")
+@Table(name = "categoria")
 public class Categoria {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "categoria_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer categoriaId;
 
     private String nombre;
@@ -20,7 +20,7 @@ public class Categoria {
     private List<Pregunta> preguntas = new ArrayList<>();
 
     public String getNombre() {
-        return this.nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
@@ -28,7 +28,7 @@ public class Categoria {
     }
 
     public String getDescripcion() {
-        return this.descripcion;
+        return descripcion;
     }
 
     public void setDescripcion(String descripcion) {
@@ -45,6 +45,14 @@ public class Categoria {
 
     public void agregarPregunta(Pregunta pregunta){
         this.preguntas.add(pregunta);
+    }
+
+    public Integer getCategoriaId() {
+        return categoriaId;
+    }
+
+    public setCategoriaId(Integer categoriaId){
+        this.categoriaId = categoriaId;
     }
 
 }

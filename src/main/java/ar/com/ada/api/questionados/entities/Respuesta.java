@@ -1,7 +1,9 @@
 package ar.com.ada.api.questionados.entities;
 
+impor javax.persistence.*;
+
 @Entity
-@Table(name="respuesta")
+@Table(name = "respuesta")
 public class Respuesta {
 
     @Id
