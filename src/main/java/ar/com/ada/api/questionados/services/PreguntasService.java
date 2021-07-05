@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
 
 import ar.com.ada.api.questionados.entities.Categoria;
 import ar.com.ada.api.questionados.entities.Pregunta;
@@ -35,6 +35,7 @@ public class PreguntasService {
     }
 
     public Pregunta crearPregunta(String enunciado, Integer categoriaId, List<Respuesta> opciones) {
+        
         Pregunta pregunta = new Pregunta();
         pregunta.setEnunciado(enunciado);
 
@@ -49,4 +50,6 @@ public class PreguntasService {
         repo.save(pregunta);
         return pregunta;   
     }
+
+
 }

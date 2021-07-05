@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import ar.com.ada.api.questionados.entities.Respuesta;
 
-@RepuestaRepository
+@Repository
 public interface RespuestaRepository extends JpaRepository<Respuesta, Integer> {
 
     

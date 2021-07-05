@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ar.com.ada.api.questionados.entities.*;
-import ar.com.ada.api.questionados.services.PreguntaService;
+import ar.com.ada.api.questionados.services.PreguntasService;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
 import ar.com.ada.api.questionados.models.request.InfoPreguntaNueva;
 import ar.com.ada.api.questionados.models.response.GenericResponse;
 
@@ -17,7 +19,7 @@ import ar.com.ada.api.questionados.models.response.GenericResponse;
 public class PreguntaController {
     
     @Autowired
-    private PreguntaService service;
+    private PreguntasService service;
 
     @GetMapping("/preguntas")
     public ResponseEntity<List<Pregunta>> traerPreguntas() {
@@ -35,7 +37,7 @@ public class PreguntaController {
     public ResponseEntity<?> crearPregunta(@RequestBody InfoPreguntaNueva preguntaNueva) {
         GenericResponse respuesta = new GenericResponse();
 
-        Pregunta pregunta = service.crearPregunta(preguntaNueva.enunciado,)
+        Pregunta pregunta = service.crearPregunta(preguntaNueva.enunciado, preguntaNueva.categoriaId, preguntaNueva.opciones);
         respuesta.isOk = true;
         respuesta.id = pregunta.getPreguntaId();
         respuesta.message = "La pregunta fue creada con exito.";
