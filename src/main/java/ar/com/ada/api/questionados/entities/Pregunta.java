@@ -13,9 +13,10 @@ public class Pregunta {
     private Integer preguntaId;
 
     @ManyToOne
-    @JoinColumn(name = "categoria_id", referencedColumnaName = "categoria_id")
+    @JoinColumn(name = "categoria_id", referencedColumnName = "categoria_id")
     private Categoria categoria;
 
+    @Column(name = "enunciado")
     private String enunciado;
 
     @OneToMany(mappedBy = "pregunta", cascade = CascadeType.ALL, fetch = FetchType.EAGER)

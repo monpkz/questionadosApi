@@ -51,7 +51,7 @@ public class Categoria {
         return categoriaId;
     }
 
-    public setCategoriaId(Integer categoriaId){
+    public void setCategoriaId(Integer categoriaId){
         this.categoriaId = categoriaId;
     }
 

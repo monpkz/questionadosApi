@@ -1,6 +1,6 @@
 package ar.com.ada.api.questionados.entities;
 
-impor javax.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "respuesta")
@@ -13,10 +13,11 @@ public class Respuesta {
 
     private String texto;
 
+    @Column(name = "es_correcta")
     private boolean esCorrecta;
 
     @ManyToOne
-    @JoinColumn(name = "pregunta_id", referencedColumnaName = "pregunta_id")
+    @JoinColumn(name = "pregunta_id", referencedColumnName = "pregunta_id")
     private Pregunta pregunta;
 
     public Integer getRespuestaId() {
