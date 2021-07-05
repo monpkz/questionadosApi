@@ -12,12 +12,12 @@ public class Pregunta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer preguntaId;
 
+    @Column(name = "enunciado")
+    private String enunciado;
+
     @ManyToOne
     @JoinColumn(name = "categoria_id", referencedColumnName = "categoria_id")
     private Categoria categoria;
-
-    @Column(name = "enunciado")
-    private String enunciado;
 
     @OneToMany(mappedBy = "pregunta", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Respuesta> opciones = new ArrayList<>();
@@ -34,6 +34,14 @@ public class Pregunta {
         this.preguntaId = preguntaId;
     }
 
+    public String getEnunciado() {
+        return enunciado;
+    }
+
+    public void setEnunciado(String enunciado) {
+        this.enunciado = enunciado;
+    }
+    
     public Categoria getCategoria() {
         return categoria;
     }
@@ -41,14 +49,6 @@ public class Pregunta {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
         this.categoria.agregarPregunta(this);
-    }
-
-    public String getEnunciado() {
-        return enunciado;
-    }
-
-    public void setEnunciado(String enunciado) {
-        this.enunciado = enunciado;
     }
 
     public List<Respuesta> getOpciones() {

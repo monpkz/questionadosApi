@@ -22,6 +22,14 @@ public class Categoria {
     @JsonIgnore
     private List<Pregunta> preguntas = new ArrayList<>();
 
+    public Integer getCategoriaId() {
+        return categoriaId;
+    }
+
+    public void setCategoriaId(Integer categoriaId){
+        this.categoriaId = categoriaId;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -48,14 +56,6 @@ public class Categoria {
 
     public void agregarPregunta(Pregunta pregunta){
         this.preguntas.add(pregunta);
-    }
-
-    public Integer getCategoriaId() {
-        return categoriaId;
-    }
-
-    public void setCategoriaId(Integer categoriaId){
-        this.categoriaId = categoriaId;
     }
 
 }
