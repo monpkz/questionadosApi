@@ -30,7 +30,7 @@ public class CategoriaController {
         return ResponseEntity.ok(service.buscarCategoria(id));
     }
     
-    @PostMapping(value = "/categoria")
+    @PostMapping(value = "/categorias")
     public ResponseEntity<?> crearCategoria(@RequestBody Categoria categoria) {
         GenericResponse r = new GenericResponse();
 
