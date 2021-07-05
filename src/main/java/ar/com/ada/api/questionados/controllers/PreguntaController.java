@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ar.com.ada.api.questionados.entities.*;
-import ar.com.ada.api.questionados.services.PreguntasService;
+import ar.com.ada.api.questionados.services.PreguntaService;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +19,7 @@ import ar.com.ada.api.questionados.models.response.GenericResponse;
 public class PreguntaController {
     
     @Autowired
-    private PreguntasService service;
+    private PreguntaService service;
 
     @GetMapping("/preguntas")
     public ResponseEntity<List<Pregunta>> traerPreguntas() {
