@@ -55,5 +55,9 @@ public class Respuesta {
         this.pregunta = pregunta;
         this.pregunta.agregarRespuesta(this);//relacion bidireccional
     }
+
+    public boolean isEsCorrecta() {
+        return esCorrecta;
+    }
     
 }
