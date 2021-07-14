@@ -9,6 +9,7 @@ import ar.com.ada.api.questionados.models.request.RespuestaAVerificar;
 import ar.com.ada.api.questionados.models.response.RespuestaVerificada;
 import ar.com.ada.api.questionados.services.*;
 
+@RestController
 public class QuestionadosController {
 
 //GET /questionados/preguntas
