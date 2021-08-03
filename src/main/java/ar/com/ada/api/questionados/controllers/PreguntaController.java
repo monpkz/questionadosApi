@@ -44,4 +44,16 @@ public class PreguntaController {
 
         return ResponseEntity.ok(preguntaNueva);
     }
+
+    @DeleteMapping("/preguntas/{id}")
+    public ResponseEntity<GenericResponse>eliminar (@PathVariable Integer id){
+
+        service.eliminar(id);
+        GenericResponse respuesta = new GenericResponse();
+
+        respuesta.isOk = true;
+        respuesta.message = "Categoria eliminada";
+
+        return ResponseEntity.ok(respuesta);
+    }
 }

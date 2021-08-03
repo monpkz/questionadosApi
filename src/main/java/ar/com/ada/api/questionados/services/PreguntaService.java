@@ -51,4 +51,9 @@ public class PreguntaService {
         repo.save(pregunta);
         return pregunta;
     }
+
+    public void eliminar(Integer id){
+        Pregunta pregunta = this.buscarPreguntaPorId(id);
+        repo.delete(pregunta);
+    }
 }
