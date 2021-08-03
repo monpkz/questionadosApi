@@ -52,7 +52,7 @@ public class PreguntaController {
         GenericResponse respuesta = new GenericResponse();
 
         respuesta.isOk = true;
-        respuesta.message = "Categoria eliminada";
+        respuesta.message = "Pregunta eliminada con exito.";
 
         return ResponseEntity.ok(respuesta);
     }
