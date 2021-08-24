@@ -9,11 +9,8 @@ import ar.com.ada.api.questionados.entities.Respuesta;
 public class PreguntaAResolver {
 
     public Integer preguntaId;
-
     public String enunciado;
-
     public Categoria categoria;
-
     public List<OpcionPregunta> opciones = new ArrayList<>();
 
     public static PreguntaAResolver convertirDesde(Pregunta pregunta) {

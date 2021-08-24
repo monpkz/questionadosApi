@@ -18,7 +18,7 @@ public class QuestionadosController {
     QuestionadosService service;
 
     //GET /questionados/next
-    @GetMapping("/questionsdos/next")
+    @GetMapping("/questionados/next")
     public ResponseEntity<PreguntaAResolver> traerPreguntaRaondom() { 
 
         Pregunta pregunta = service.traerPreguntaRandom();
