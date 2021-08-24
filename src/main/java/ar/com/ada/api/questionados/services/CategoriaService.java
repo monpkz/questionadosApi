@@ -20,7 +20,7 @@ public class CategoriaService {
         return repo.findAll();
     }
 
-    public Categoria buscarCategoria(Integer categoriaId){
+   /* public Categoria buscarCategoriaV2(Integer categoriaId){
 
         Optional<Categoria> resultado = repo.findById(categoriaId);
         Categoria categoria = null;
@@ -28,15 +28,15 @@ public class CategoriaService {
         if (resultado.isPresent())
             categoria = resultado.get();
         return categoria;
-    }
+    }*/
 
-    /*public Categoria buscarCategoriaV2(Integer categoriaId) {
+    public Categoria buscarCategoria(Integer categoriaId) {
 
         Categoria categoria = repo.findById(categoriaId.intValue());
 
         return categoria;
 
-    }*/
+    }
 
     public boolean crearCategoria(Categoria categoria) {
         if(existe(categoria.getNombre()))
