@@ -39,7 +39,7 @@ public class Respuesta {
         this.texto = texto;
     }
 
-    public boolean getEsCorrecta() {
+    public boolean isEsCorrecta() {
         return esCorrecta;
     }
 
@@ -56,8 +56,5 @@ public class Respuesta {
         this.pregunta.agregarRespuesta(this);//relacion bidireccional
     }
 
-    public boolean isEsCorrecta() {
-        return esCorrecta;
-    }
     
 }

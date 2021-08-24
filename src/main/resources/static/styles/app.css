@@ -4,7 +4,7 @@ body {
     width:100vw;
     background:#ee8d95;
     --c1: #768eeb;
-    --c2: rgb(0, 0, 0);
+    --c2: rgb(127, 176, 185);
     background-image: -webkit-linear-gradient(top, var(--c1), var(--c2));
     background-image: -moz-linear-gradient(top, var(--c1), var(--c2));
     background-image: -o-linear-gradient(top, var(--c1), var(--c2));

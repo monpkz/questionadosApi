@@ -13,12 +13,13 @@ public class PreguntaAResolver {
     public String enunciado;
 
     public Categoria categoria;
-    
+
     public List<OpcionPregunta> opciones = new ArrayList<>();
 
     public static PreguntaAResolver convertirDesde(Pregunta pregunta) {
 
         PreguntaAResolver preguntaAResolver = new PreguntaAResolver();
+
         preguntaAResolver.preguntaId = pregunta.getPreguntaId();
         preguntaAResolver.enunciado = pregunta.getEnunciado();
         preguntaAResolver.categoria = pregunta.getCategoria();
