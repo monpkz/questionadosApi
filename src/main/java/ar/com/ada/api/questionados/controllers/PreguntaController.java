@@ -46,7 +46,7 @@ public class PreguntaController {
     }
 
     @DeleteMapping("/preguntas/{id}")
-    public ResponseEntity<GenericResponse>eliminar (@PathVariable Integer id){
+    public ResponseEntity<GenericResponse> eliminar(@PathVariable Integer id){
 
         service.eliminar(id);
         GenericResponse respuesta = new GenericResponse();
