@@ -6,5 +6,5 @@ Documentacion postman -> https://documenter.getpostman.com/view/16170614/U16ewUP
 
 Deployment -> https://questionados-ada-back.herokuapp.com
 
-💻⚙️ Creado usando Java11, SQL y SpringBoot.
-    Deploy heroku, postgres.
+💻⚙️ Creado usando Java11, SQL, SpringBoot. Para el front javaScrip, HTML, css. 
+      Deploy en heroku, postgres.
